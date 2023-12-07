@@ -8,7 +8,6 @@ import {MyToken} from "../src/MyToken.sol";
 /// @notice This script is used for deploying the MyToken contract
 /// @dev Inherits from Script in forge-std for deployment functionalities
 contract DeployMyTokenScript is Script {
-    
     /// @notice Runs the deployment script for MyToken
     /// @dev Retrieves the deployer's private key and contract owner address from environment variables.
     /// It then broadcasts the transaction to deploy MyToken and stops broadcasting after deployment.
