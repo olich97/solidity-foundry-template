@@ -112,4 +112,4 @@ jobs:
       - name: Build documentation
         run: |
           forge --version
-          forge doc
+          forge doc --build
