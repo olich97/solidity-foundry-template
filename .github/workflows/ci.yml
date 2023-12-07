@@ -94,7 +94,7 @@ jobs:
         continue-on-error: true
         with:
           sarif: results.sarif
-          slither-args: --filter-paths "./lib|./test" # exclude other contracts (open zeppelin ones)
+          slither-args: --filter-paths "./lib|./test" # exclude other contracts (open zeppelin ones) and test
 
       - name: Upload static anaylisis SARIF output file # it should also add relevant comments on PR
         uses: github/codeql-action/upload-sarif@v2
