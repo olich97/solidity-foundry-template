@@ -1,4 +1,6 @@
-## Foundry
+## Solidity Foundry template
+
+A template for solidity smart contract development with foundry.
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
 
@@ -48,7 +50,10 @@ $ anvil
 ### Deploy
 
 ```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+# To load the variables in the .env file
+$ source .env
+# To deploy and verify our contract
+$ forge script script/DeployMyToken.sol:DeployMyTokenScript --rpc-url $SEPOLIA_URL --broadcast --verify -vvvv
 ```
 
 ### Cast

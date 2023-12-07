@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy documentation to Pages
+name: Documentation Deploy
 
 on:
   # Runs on pushes targeting the default branch
@@ -37,7 +37,7 @@ jobs:
       - name: Build documentation
         run: |
           forge --version
-          forge doc
+          forge doc --build
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -45,8 +45,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          # Upload docs folder
-          path: 'docs'
+          # Upload final docs folder
+          path: 'docs/book'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
