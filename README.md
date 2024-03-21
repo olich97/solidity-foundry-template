@@ -1,21 +1,17 @@
-## Solidity Foundry template
+## Solidity Foundry Template
 
-A template for solidity smart contract development with foundry.
+A template for solidity smart contract development with [foundry](https://book.getfoundry.sh/).
+> Full article: https://olich.me//post/smart-contract-solidity-development-with-foundry
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Getting Started
+Click [`Use this template`](https://github.com/olich97/solidity-foundry-template/generate) on Github to create a new repository with this repo as the initial state.
 
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
+Or run (also works for existing projects):
+```shell
+forge init --template https://github.com/soliditylabs/forge-erc20-template
+git submodule update --init --recursive
+forge install
+```
 
 ### Build
 
@@ -26,7 +22,9 @@ $ forge build
 ### Test
 
 ```shell
-$ forge test
+$ forge test -vvv
+# with gas report
+$ forge test -gas-report
 ```
 
 ### Format
