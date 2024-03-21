@@ -8,7 +8,7 @@ Click [`Use this template`](https://github.com/olich97/solidity-foundry-template
 
 Or run (also works for existing projects):
 ```shell
-forge init --template https://github.com/soliditylabs/forge-erc20-template
+forge init --template https://github.com/olich97/solidity-foundry-template
 git submodule update --init --recursive
 forge install
 ```
